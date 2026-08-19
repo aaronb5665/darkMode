@@ -26,7 +26,8 @@ button {
 }
 
 section {
-    background-color: rgb(245, 245, 245);       
+    background-color: rgb(245, 245, 245);      
+    transition: all 300ms ease; 
 }
 
 input, textarea {
@@ -169,6 +170,20 @@ nav,
     filter: invert(1);
 }
 
+.dark-theme .scroll__icon {
+    border-color: white;
+}
+/* this changes the color of the underlined nav links to white */
+.dark-theme .scroll__icon::after,
+.dark-theme .link__hover-effect--black::after {
+    background-color: white;
+}
+
+.dark-theme .mail__btn {
+    background-color: white;
+    color: #242424;
+}
+
 /*
 
 LANDING PAGE
@@ -225,14 +240,14 @@ LANDING PAGE
     bottom: 32px;                      
     right: 40px;                       
 }
-
+/* this will position the scroll in the middle of the page and and the bottom of the top page */
 .scroll {
     position: absolute;               
     bottom: 20px;                      
     left: 50%;                         
     transform: translateX(-50%);       
 }
-
+/* this is the creation of the scroll at the bottom of the top page of the site */
 .scroll__icon {
 width: 20px;                            
 height: 30px;                           
@@ -243,7 +258,7 @@ align-items: center;
 justify-content: center;                
 }
 
-
+/* this will put the moving dot in the middle of the scroll icon */
 .scroll__icon:after {
     content: "";                       
     width: 4px;                       
